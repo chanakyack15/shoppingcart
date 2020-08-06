@@ -1,0 +1,20 @@
+﻿@model RegistrationModel
+<h2>@ViewBag.Title</h2>
+<div class="container">
+    <div  asp-validation-summary="All"></div>
+    <form class="col-md-8" method="post">
+        
+            <label for="inputAddress">Name</label>
+            <input type="text" class="form-control" id="inputAddress" asp-for="Name">
+        
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" asp-for="Email">
+           
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" asp-for="Password">
+          
+
+
+        <input type="submit" class="btn btn-primary" value="send"/>
+    </form>
+</div>

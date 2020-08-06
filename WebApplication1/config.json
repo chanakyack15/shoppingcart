@@ -1,0 +1,6 @@
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=ShoppingApp; Trusted_Connection = True; MultipleActiveResultSets=True; Integrated Security = true"
+    }
+}
+
