@@ -1,6 +1,22 @@
 ﻿@model IEnumerable<Product>
 
 <p>COUNT : @Model.Count()</p>
-@foreach(var p in Model) { 
-<li>@p.Title</li>
-}
+<div class="row">
+    @foreach (var p in Model)
+    {
+        
+    <div class="col-md-3">
+        <div class="border bg-light rounded">
+
+            <img class="card-img-top" src="~/img/indian.png" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">$@p.Price</p>
+                <p class="card-text">$@p.Title</p>
+                <button>Buy</button>
+            </div>
+        </div>
+    </div>
+        
+
+    }
+</div>

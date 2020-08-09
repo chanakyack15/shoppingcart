@@ -25,10 +25,10 @@ namespace WebApplication1.Data
         {
 
             base.OnModelCreating(modelBuilder);
-            /*modelBuilder.Entity<Order>()
+           /* modelBuilder.Entity<Order>()
                 .HasData(new Order()
                 {
-                    OrderNumber = "1234"  
+                    OrderNumber = "1234"
                 });*/
         }
        

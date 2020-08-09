@@ -32,7 +32,7 @@ namespace WebApplication1.Data
             {
                 //it will return false if any products in the db
 
-                var filepath = Path.Combine(Hosting.ContentRootPath, "Data/shopping2");
+                var filepath = Path.Combine(Hosting.ContentRootPath, "Data/shopping.json");
                 var json = File.ReadAllText(filepath);
                 var products = JsonConvert.DeserializeObject<IEnumerable<Product>>(json);
                 ctx.Products.AddRange(products);

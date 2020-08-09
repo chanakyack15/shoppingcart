@@ -10,24 +10,30 @@ namespace WebApplication1.Controllers
 {
     public class AppController : Controller
     {
-        private readonly shoppingContext _context;
+        private readonly IRepo reposi;
 
-        public AppController(shoppingContext context)
+        //private readonly Repo _context;
+
+        public AppController(IRepo reposi)
         {
-            _context = context;
+           
+            this.reposi = reposi;
         }
         public IActionResult Index()
         {
-           
+            //var results = _context.Products.ToList();
             return View();
         }
         public IActionResult Cart() {
 
-           
-            var results = from p in _context.Products
-                          orderby p.Title 
-                          select p;
-            return View(results.ToList());
+            /*
+             var results = from p in _context.Products
+                           orderby p.Title 
+                           select p;
+             return View(results.ToList());*/
+             
+            var results = reposi.GetAllProducts();
+            return View(results);
         }
         public IActionResult Login() {
             ViewBag.Title = "Login";

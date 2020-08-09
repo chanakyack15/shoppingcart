@@ -30,7 +30,12 @@ namespace WebApplication1
             services.AddDbContext<shoppingContext>(cfg => {
                 cfg.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
             });
+            services.AddTransient<WebApplicationSeeder>();
+
+            services.AddScoped<IRepo, Repo>();
             services.AddControllersWithViews();
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
