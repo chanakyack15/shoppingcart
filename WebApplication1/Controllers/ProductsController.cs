@@ -25,5 +25,12 @@ namespace WebApplication1.Controllers
         public IActionResult Get() {
             return Ok(repository.GetAllProducts());
         }
+
+        // i tried to make the api for the id but i don't know why its not executing 
+        [HttpGet("int:id")]
+        public IActionResult Get(int id)
+        {
+            return Ok(repository.GetProductId(id));
+        }
     }
 }

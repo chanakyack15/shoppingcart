@@ -27,6 +27,12 @@ namespace WebApplication1.Data
                 .Where(p => p.Category == category)
                 .ToList();
         }
+        public IEnumerable<Product> GetProductId(int id)
+        {
+            return ctx.Products
+                .Where(p => p.Id == id)
+                .ToList();
+        }
        /* public bool SaveAll() {
             return ctx.SaveChanges() > 0;
             }*/
